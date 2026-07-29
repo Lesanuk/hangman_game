@@ -1,9 +1,6 @@
 # Hangman game
 from wordslist import words
 import random
-from rangame import lowest_num
-
-print(lowest_num)
 
 # Dictionary of key:()
 hangman_art = {0: ("   ", 
