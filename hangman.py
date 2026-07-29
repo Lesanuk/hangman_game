@@ -49,17 +49,20 @@ def main():
     print("2. Food")
     print("3. Animals")
 
-    choice = input("Choose a category (1-3): ")
+    while True:
+        choice = input("Choose a category (1-3): ")
 
-    if choice == "1":
-        answer = random.choice(words["countries"])
-    elif choice == "2":
-        answer = random.choice(words["food"])
-    elif choice == "3":
-        answer = random.choice(words["animals"])
-    else:
-        print("Invalid category")
-        return
+        if choice == "1":
+            answer = random.choice(words["countries"])
+            break
+        elif choice == "2":
+            answer = random.choice(words["food"])
+            break
+        elif choice == "3":
+            answer = random.choice(words["animals"])
+            break
+        else:
+            print("Invalid category. Please choose 1, 2, or 3.")
     
     hint = ["_"] * len(answer) # keep in mind
     wrong_guesses = 0
