@@ -44,7 +44,23 @@ def display_answer(answer):
     print(" ".join(answer))
 
 def main():
-    answer = random.choice(words)
+    print("Categories:")
+    print("1. Countries")
+    print("2. Food")
+    print("3. Animals")
+
+    choice = input("Choose a category (1-3): ")
+
+    if choice == "1":
+        answer = random.choice(words["countries"])
+    elif choice == "2":
+        answer = random.choice(words["food"])
+    elif choice == "3":
+        answer = random.choice(words["animals"])
+    else:
+        print("Invalid category")
+        return
+    
     hint = ["_"] * len(answer) # keep in mind
     wrong_guesses = 0
     guessed_letters = set() # we have to add "set" before ()
